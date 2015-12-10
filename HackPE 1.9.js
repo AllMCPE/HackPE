@@ -235,7 +235,7 @@ function mainMenu(){
 			survival.setOnClickListener(new View.OnClickListener({
 				onClick: function(viewarg){
 					Level.setGameMode(0);
-                    clientMessage("/gamemode 0")
+                    Server.sendChat("/gamemode 0")
 				}
 			}));
 			menuLayout.addView(survival);
