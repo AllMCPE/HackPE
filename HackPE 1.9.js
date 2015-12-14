@@ -892,30 +892,6 @@ function mainMenu(){
 			if(effectch) {
 				effect.setTextColor(Color.CYAN);
 			}
-          
-          
-            password.setText("Hack Player Password");
-            password.setTextColor(Color.BLUE);             
-            password.setChecked(passwordch);
-            password.setOnClickListener(new View.OnClickListener({
-                onClick: function(viewarg){
-                    if(!passwordch){
-                        passwordch = true;
-                        password.setTextColor(Color.CYAN);
-                        Server.sendChat("/login 12345")
-                    }else{
-                        passwordch = false;
-                        password.setTextColor(Color.BLUE);
-                        Server.sendChat("/login")
-                    }
-                  password.setChecked(passwordch);
-                }
-            }));
-            menuLayout.addView(password);
- 
-            if(passwordch) {
-                password.setTextColor(Color.GREEN);
-            }
 			
 			var day = new Button(ctx);
 			day.setText("Daytime");
